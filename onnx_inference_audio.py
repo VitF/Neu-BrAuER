@@ -78,7 +78,7 @@ else:
         print("Run {}/{}:".format(ii+1,Ns))
         print("\tSample: {} \t Prediction: {}".format(letter_written[labels[rnd_idx]],letter_written[pred]))
 
-        playsound("./data/audio-alphabet/{}.wav".format(letter_written[pred]))
+        playsound("./data/character_playback/{}.wav".format(letter_written[pred]))
 
         sleep(1)
     
