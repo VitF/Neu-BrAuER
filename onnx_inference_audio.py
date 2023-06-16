@@ -1,3 +1,4 @@
+import beepy
 import numpy as np
 import onnxruntime as ort
 from playsound import playsound
@@ -78,7 +79,13 @@ else:
         print("Run {}/{}:".format(ii+1,Ns))
         print("\tSample: {} \t Prediction: {}".format(letter_written[labels[rnd_idx]],letter_written[pred]))
 
-        playsound("./data/character_playback/{}.wav".format(letter_written[pred]))
+        if letter_written[pred] == "Space":
+
+            beepy.beep()
+        
+        else:
+
+            playsound("./data/character_playback/{}.wav".format(letter_written[pred]))
 
         sleep(1)
     

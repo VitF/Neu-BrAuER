@@ -6,6 +6,7 @@ dependencies:
   - h5py
   - pip
   - pip:
+    - beepy
     - jupyter
     - matplotlib
     - numpy
