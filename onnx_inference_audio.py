@@ -2,7 +2,7 @@ import numpy as np
 import onnxruntime as ort
 from playsound import playsound
 from time import sleep
-import torch
+#import torch
 
 
 torch2numpy_dataset = False # if True, data and labels are loaded for stored .pt file, converted to numpy array and saved as .npy
