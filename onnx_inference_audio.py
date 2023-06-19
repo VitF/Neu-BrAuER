@@ -1,4 +1,3 @@
-import beepy
 import numpy as np
 import onnxruntime as ort
 from playsound import playsound
@@ -9,7 +8,7 @@ from time import sleep
 torch2numpy_dataset = False # if True, data and labels are loaded for stored .pt file, converted to numpy array and saved as .npy
 
 whole_set = False # if False, random single-sampole inference is run from the test set
-Ns = 10 # number of single-sample inferences, used only if whole_set is False
+Ns = 100 # number of single-sample inferences, used only if whole_set is False
 
 
 net = "snnTorch_Braille_statequant_x6k9dqcj_YKa5r.onnx" #"snnTorch_HAR_statequant_12b8jdeq_ju8w6-ALTERNATIVE.onnx" #"snnTorch_HAR_dummy.onnx"
@@ -80,13 +79,7 @@ else:
         print("Run {}/{}:".format(ii+1,Ns))
         print("\tSample: {} \t Prediction: {}".format(letter_written[labels[rnd_idx]],letter_written[pred]))
 
-        if letter_written[pred] == "Space":
-
-            playsound("./data/character_playback/{}.wav".format(letter_written[pred]))
-        
-        else:
-
-            playsound("./data/character_playback/{}.wav".format(letter_written[pred]))
+        playsound("./data/character_playback/{}.wav".format(letter_written[pred]))
 
         sleep(1)
     
