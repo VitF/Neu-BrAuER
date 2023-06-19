@@ -6,13 +6,14 @@ dependencies:
   - h5py
   - pip
   - pip:
-    - beepy
+    - kaleido
     - jupyter
     - matplotlib
     - numpy
     - onnxruntime
     - pandas
     - playsound==1.2.2
+    - plotly
     - scipy
     - seaborn
     - sklearn
