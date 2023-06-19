@@ -81,7 +81,7 @@ else:
 
         if letter_written[pred] == "Space":
 
-            beepy.beep()
+            playsound("./data/beep_sound.wav")
         
         else:
 
