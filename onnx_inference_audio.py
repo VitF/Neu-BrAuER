@@ -65,6 +65,7 @@ else:
 
     check_preds = np.zeros(Ns)
 
+    letter = "A"
     for ii in range(Ns):
 
         rnd_idx = np.random.randint(data.shape[0])
@@ -81,7 +82,7 @@ else:
 
         if letter_written[pred] == "Space":
 
-            playsound("./data/beep_sound.wav")
+            playsound("./data/character_playback/{}.wav".format(letter_written[pred]))
         
         else:
 
