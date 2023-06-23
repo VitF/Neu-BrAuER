@@ -7,17 +7,17 @@ from time import sleep
 
 torch2numpy_dataset = False # if True, data and labels are loaded for stored .pt file, converted to numpy array and saved as .npy
 
-whole_set = False # if False, random single-sampole inference is run from the test set
+whole_set = True # if False, random single-sampole inference is run from the test set
 Ns = 100 # number of single-sample inferences, used only if whole_set is False
 
 
-net = "snnTorch_Braille_statequant_x6k9dqcj_YKa5r.onnx" #"snnTorch_HAR_statequant_12b8jdeq_ju8w6-ALTERNATIVE.onnx" #"snnTorch_HAR_dummy.onnx"
+net = "snnTorch_Braille_40_statequant_Neu-BrAuER_rebsp36h_Qmabv.onnx" #"snnTorch_Braille_statequant_x6k9dqcj_YKa5r.onnx"
 
 device = "cpu"
 
 if torch2numpy_dataset:
 
-    dataset_filename = "./data/braille_letters_digits_40Hz_augmented_ds_test.pt" #'watch_subset2_40_ds_test.pt'
+    dataset_filename = "./data/braille_letters_digits_40Hz_augmented_ds_test.pt"
 
     dataset = torch.load(dataset_filename, map_location=device)
 
@@ -64,7 +64,6 @@ else:
 
     check_preds = np.zeros(Ns)
 
-    letter = "A"
     for ii in range(Ns):
 
         rnd_idx = np.random.randint(data.shape[0])
