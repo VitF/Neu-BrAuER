@@ -11,7 +11,7 @@ whole_set = True # if False, random single-sampole inference is run from the tes
 Ns = 100 # number of single-sample inferences, used only if whole_set is False
 
 
-net = "snnTorch_Braille_40_statequant_Neu-BrAuER_rebsp36h_Qmabv.onnx" #"snnTorch_Braille_statequant_x6k9dqcj_YKa5r.onnx"
+net = "./models/snnTorch_Braille_40_statequant_Neu-BrAuER_resZero_rebsp36h_Qmabv.onnx" #"./models/snnTorch_Braille_40_statequant_Neu-BrAuER_rebsp36h_Qmabv.onnx"
 
 device = "cpu"
 
