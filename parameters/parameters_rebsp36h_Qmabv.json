@@ -1,0 +1,1 @@
+{"neurons_per_pop": 15.0, "output_pop": 16, "nb_hidden": 300.0, "alpha_hid": 0.8, "alpha_out": 0.4, "beta_hid": 0.65, "beta_out": 0.8, "beta_enc": 0.2, "quantization_bits_enc": 4, "quantization_bits_hid": 8, "quantization_bits_out": 8, "lr": 0.0001, "slope": 10.0, "batch_size": 64}
