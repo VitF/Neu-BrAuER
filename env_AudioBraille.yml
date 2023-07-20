@@ -10,6 +10,7 @@ dependencies:
     - jupyter
     - matplotlib
     - numpy
+    - onnx
     - onnxruntime
     - pandas
     - playsound==1.2.2

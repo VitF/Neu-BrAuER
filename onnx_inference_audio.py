@@ -1,4 +1,5 @@
 import numpy as np
+import onnx
 import onnxruntime as ort
 from playsound import playsound
 from time import sleep
@@ -10,8 +11,15 @@ torch2numpy_dataset = False # if True, data and labels are loaded for stored .pt
 whole_set = True # if False, random single-sampole inference is run from the test set
 Ns = 100 # number of single-sample inferences, used only if whole_set is False
 
+experiment_id = "rebsp36h"
+trial_id = "Qmabv"
 
-net = "./models/snnTorch_Braille_40_statequant_Neu-BrAuER_resZero_rebsp36h_Qmabv.onnx" #"./models/snnTorch_Braille_40_statequant_Neu-BrAuER_rebsp36h_Qmabv.onnx"
+net = "./models/snnTorch_Braille_40_statequant_Neu-BrAuER_check_{}_{}_20230719_144742.onnx".format(experiment_id,trial_id) #"./models/snnTorch_Braille_40_Neu-BrAuER_resZero_rebsp36h_Qmabv.onnx" #"./models/snnTorch_Braille_40_statequant_Neu-BrAuER_rebsp36h_Qmabv.onnx"
+
+if onnx.checker.check_model(net, full_check=True) == None:
+    print("#######################")
+    print("ONNX model check: done!")
+    print("#######################")
 
 device = "cpu"
 
