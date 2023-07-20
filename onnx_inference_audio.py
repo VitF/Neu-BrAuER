@@ -3,10 +3,10 @@ import onnx
 import onnxruntime as ort
 from playsound import playsound
 from time import sleep
-#import torch
 
 
-torch2numpy_dataset = False # if True, data and labels are loaded for stored .pt file, converted to numpy array and saved as .npy
+torch2numpy_dataset = False # if True, data and labels are loaded from stored .pt file and converted to numpy array
+torch2numpy_save = False # if True (with torch2numpy_dataset=True) data and labels are loaded from stored .pt file, converted to numpy array and saved as .npy
 
 whole_set = True # if False, random single-sampole inference is run from the test set
 Ns = 100 # number of single-sample inferences, used only if whole_set is False
@@ -14,7 +14,7 @@ Ns = 100 # number of single-sample inferences, used only if whole_set is False
 experiment_id = "rebsp36h"
 trial_id = "Qmabv"
 
-net = "./models/snnTorch_Braille_40_statequant_Neu-BrAuER_check_{}_{}_20230719_144742.onnx".format(experiment_id,trial_id) #"./models/snnTorch_Braille_40_Neu-BrAuER_resZero_rebsp36h_Qmabv.onnx" #"./models/snnTorch_Braille_40_statequant_Neu-BrAuER_rebsp36h_Qmabv.onnx"
+net = "./models/snnTorch_Braille_40_statequant_Neu-BrAuER_check_{}_{}_20230720_111958.onnx".format(experiment_id,trial_id) #"./models/snnTorch_Braille_40_Neu-BrAuER_resZero_rebsp36h_Qmabv.onnx" #"./models/snnTorch_Braille_40_statequant_Neu-BrAuER_rebsp36h_Qmabv.onnx"
 
 if onnx.checker.check_model(net, full_check=True) == None:
     print("#######################")
@@ -25,21 +25,32 @@ device = "cpu"
 
 if torch2numpy_dataset:
 
+    import torch
+
     dataset_filename = "./data/braille_letters_digits_40Hz_augmented_ds_test.pt"
 
     dataset = torch.load(dataset_filename, map_location=device)
+
+    ### The following commented lines can be uncommented (together with commenting lines 42-->46) to introduce random shuffling in the data loading
+    # dataloader = torch.utils.data.DataLoader(dataset, batch_size=1, shuffle=True, drop_last=False)
+    # input_tensors = []
+    # input_labels = []
+    # for dt, lb in dataloader:
+    #     input_tensors.append(dt[0].numpy())
+    #     input_labels.append(lb[0].numpy())
 
     input_tensors = []
     input_labels = []
     for i in dataset:
         input_tensors.append(i[0].numpy())
         input_labels.append(i[1].numpy())
-
+    
     data = np.array(input_tensors)
     labels = np.array(input_labels)
 
-    np.save('./data/numpy_data_braille_letters_digits_40Hz_augmented_ds_test', data)
-    np.save('./data/numpy_labels_braille_letters_digits_40Hz_augmented_ds_test', labels)
+    if torch2numpy_save:
+        np.save('./data/numpy_data_braille_letters_digits_40Hz_augmented_ds_test', data)
+        np.save('./data/numpy_labels_braille_letters_digits_40Hz_augmented_ds_test', labels)
 
 else:
 
