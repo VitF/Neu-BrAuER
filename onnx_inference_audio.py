@@ -1,3 +1,7 @@
+"""
+Last modified: 2023.08.22 - 09:47
+"""
+
 import numpy as np
 import onnx
 import onnxruntime as ort
@@ -11,8 +15,8 @@ torch2numpy_save = False # if True (with torch2numpy_dataset=True), data and lab
 whole_set = True # if False, random single-sampole inference is run from the test set
 Ns = 100 # number of single-sample inferences, used only if whole_set is False
 
-experiment_id = "rebsp36h"
-trial_id = "Qmabv"
+experiment_id = "vfcjkuly" # For the ECML-accepted Neu-BrAuER: "rebsp36h"
+trial_id = "z5A86" # For the ECML-accepted Neu-BrAuER: "Qmabv"
 
 net = "./models/snnTorch_Braille_40_statequant_Neu-BrAuER_check_{}_{}_20230801_125908.onnx".format(experiment_id,trial_id) #"./models/snnTorch_Braille_40_Neu-BrAuER_resZero_rebsp36h_Qmabv.onnx" #"./models/snnTorch_Braille_40_statequant_Neu-BrAuER_rebsp36h_Qmabv.onnx"
 
