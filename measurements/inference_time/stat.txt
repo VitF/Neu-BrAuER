@@ -1,5 +1,0 @@
-Inferences executed: 30614 on a total time of: 7188.562641620636 s
-Execution time statistics: 
-Mean: 0.23481291701903168
-Median: 0.23112928867340088
-Standard Deviation: 0.009254146279861942
