@@ -24,7 +24,7 @@ Ns = 100 # number of single-sample inferences, used only if whole_set is False
 experiment_id = "rebsp36h" 
 trial_id = "Qmabv"
 
-net = "./models/snnTorch_Braille_40_statequant_Neu-BrAuER_{}_{}_ref.onnx".format(experiment_id,trial_id)
+net = "./models/pretrained_Neu-BrAuER_v0_{}_{}_ref.onnx".format(experiment_id,trial_id)
 
 if onnx.checker.check_model(net, full_check=True) == None:
     print("#######################")
