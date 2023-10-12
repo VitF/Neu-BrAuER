@@ -3,21 +3,21 @@ channels:
   - defaults
 dependencies:
   - python=3.9
-  - h5py
-  - pip
+  - h5py=3.7.0
+  - pip=23.1.2
   - pip:
-    - kaleido
-    - jupyter
-    - matplotlib
-    - numpy
-    - onnx
-    - onnxruntime
-    - pandas
+    - kaleido==0.2.1
+    - jupyter==1.0.0
+    - matplotlib==3.7.1
+    - numpy==1.24.3
+    - onnx==1.14.0
+    - onnxruntime==1.15.0
+    - pandas==2.0.2
     - playsound==1.2.2
-    - plotly
-    - scipy
-    - seaborn
-    - sklearn
+    - plotly==5.15.0
+    - scipy==1.0.1
+    - seaborn==0.12.2
+    - sklearn==0.0.post5
     #- torch
 
 # THEN, activate the environment and run (from command line): pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu113
