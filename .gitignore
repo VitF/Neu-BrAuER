@@ -1,4 +1,5 @@
 !*/
 har_onnx/
 data/
+!*/data/braille_letters_digits_40Hz_augmented_ds_test.pt
 measurements/
