@@ -23,7 +23,7 @@ If you use, or refer to, these results, please cite:
   year         =    2023,
   publisher    =    {Zenodo},
   doi          =    {10.5281/zenodo.8435172},
-  url          =    {https://doi.org/10.5281/zenodo.8435172}
+  url          =    {https://zenodo.org/records/8435172}
 }
 
 @article{Fra2023NeuBrAuER,
@@ -35,4 +35,24 @@ If you use, or refer to, these results, please cite:
     volume      =   {},
     year        =   {in press}
 }
+```   
+
+\
+For newer versions of Neu-BrAuER, you can instead use the `Neu-BrAuER_inference.py` script with the desired pre-trained ONNX model from [Zenodo](https://zenodo.org/records/10000162).
+\
+In this case, please cite:
 ```
+@software{NeuBrAuER2023,
+  author       =    {Fra, Vittorio},
+  title        =    {Neu-BrAuER},
+  month        =    oct,
+  year         =    2023,
+  publisher    =    {Zenodo},
+  doi          =    {10.5281/zenodo.10000161},
+  url          =    {https://zenodo.org/records/10000162}
+}
+```
+<br/><br/>
+## Results history <sup>(test accuracy)</sup>: 
+- v0 &ensp;&ensp;&ensp; &rarr; &ensp; 73.52% 
+- v1.0 &ensp;&nbsp; &rarr; &ensp; 87.78%
