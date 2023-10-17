@@ -5,7 +5,7 @@ Given the recordings acquired through an artificial fingertip and collected in a
 Details can be found in the following paper: V. Fra et al.; "Neu-BrAuER: a neuromorphic Braille letters audio-reader for commercial edge devices"; ECML-PKDD 2023, DLNH Workshop; *in press*
 
 \
-Neu-BrAuER is based on a three-layer SNN made of leaky integrate-and.fire (LIF) neurons. It receives continuous signals from pressure sensors sliding on Braille characters as input and gives the classified letters as output by pronouncing it.\
+Neu-BrAuER is based on a three-layer SNN made of leaky integrate-and-fire (LIF) neurons. It receives continuous signals from pressure sensors sliding on Braille characters as input and gives the classified letters as output by pronouncing it.\
 A schematic of its functioning is shown below:
 \
 ![Scheme of the Neu-BrAuER model.](readme_figures/Neu-BrAuER_scheme.png)
