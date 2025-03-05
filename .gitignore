@@ -1,7 +1,9 @@
 !*/
 .vscode/
-har_onnx/
 data/*
 !data/braille_letters_digits_40Hz_augmented_ds_test.pt
 !data/character_playback/
+har_onnx/
 measurements/
+models/
+parameters/

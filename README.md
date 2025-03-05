@@ -2,7 +2,7 @@
 
 This project proposes an application of Braille letter reading showing a neuromorphic audio-reader for edge devices.\
 Given the recordings acquired through an artificial fingertip and collected in a [dataset](https://zenodo.org/record/7050094) (with different spike-encoding strategies also), a spiking neural network (SNN) similar to the one employed in the [original Braille reading paper](https://www.frontiersin.org/articles/10.3389/fnins.2022.951164/full) is designed for classification of raw signals. Specifically, Neu-BrAuER is equipped with an encoding layer which allows the model to directly work with continuous signals thanks to the neuron populations of the first layer which are in charge of performing the signal-to-spike conversion.\
-Details can be found in the following paper: V. Fra et al.; "Neu-BrAuER: a neuromorphic Braille letters audio-reader for commercial edge devices"; ECML-PKDD 2023, DLNH Workshop; *in press*
+Details can be found in the following paper: [V. Fra et al.; "Neu-BrAuER: a neuromorphic Braille letters audio-reader for commercial edge devices"; International Workshops of ECML PKDD 2023, Turin, Italy, September 18–22, 2023, Revised Selected Papers, Part V](https://link.springer.com/chapter/10.1007/978-3-031-74643-7_5)
 
 \
 Neu-BrAuER is based on a three-layer SNN made of leaky integrate-and-fire (LIF) neurons. It receives continuous signals from pressure sensors sliding on Braille characters as input and gives the classified letters as output by pronouncing it.\
@@ -26,14 +26,17 @@ If you use, or refer to, these results, please cite:
   url          =    {https://zenodo.org/records/8435172}
 }
 
-@article{Fra2023NeuBrAuER,
-    author      =   {Fra, Vittorio and Pignata, Andrea and Pignari, Riccardo and Macii, Enrico and Urgese, Gianvito},
-    doi         =   {},
-    publisher   =   {Springer}
-    journal     =   {Communications in Computer and Information Science},
-    title       =   {Neu-BrAuER: a neuromorphic Braille letters audio-reader for commercial edge devices},
-    volume      =   {},
-    year        =   {in press}
+@inproceedings{fra2025neu,
+  author        =   {Fra, Vittorio and Pignata, Andrea and Pignari, Riccardo and Macii, Enrico and Urgese, Gianvito},
+  editor        =   {Meo, Rosa and Silvestri, Fabrizio},
+  title         =   {Neu-BrAuER: A Neuromorphic Braille Letters Audio-Reader for Commercial Edge Devices},
+  booktitle     =   {Machine Learning and Principles and Practice of Knowledge Discovery in Databases},
+  year          =   {2025},
+  publisher     =   {Springer Nature Switzerland},
+  address       =   {Cham},
+  pages         =   {51--60},
+  isbn          =   {978-3-031-74643-7},
+  doi           =   {10.1007/978-3-031-74643-7_5}
 }
 ```   
 

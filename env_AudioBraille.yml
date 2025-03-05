@@ -8,16 +8,13 @@ dependencies:
   - pip:
     - kaleido==0.2.1
     - jupyter==1.0.0
-    - matplotlib==3.7.1
-    - numpy==1.24.3
     - onnx==1.14.0
     - onnxruntime==1.15.0
-    - pandas==2.0.2
     - playsound==1.2.2
     - plotly==5.15.0
-    - scipy==1.0.1
+    - scipy==1.10.1
+    - sconce==0.80
     - seaborn==0.12.2
-    - sklearn==0.0.post5
-    #- torch
-
-# THEN, activate the environment and run (from command line): pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu113
+    - scikit-learn==1.2.2
+    - git+https://github.com/jeshraghian/snntorch@a20445727de7ab91e040cd84d9266a620ce71f3a
+    - torchprofile==0.0.4
